@@ -27,12 +27,9 @@ export default function LevelNoob() {
         document.getElementById("reset")!.addEventListener("click", reset);
 
         return () => {
-            document.getElementById("increment")!.removeEventListener("click", increment)
-            document.getElementById("decrement")!.removeEventListener("click", decrement);
-            document.getElementById("reset")!.removeEventListener("click", reset);
-            // document.getElementById("increment")?.removeEventListener("click", increment)
-            // document.getElementById("decrement")?.removeEventListener("click", decrement);
-            // document.getElementById("reset")?.removeEventListener("click", reset);
+            document.getElementById("increment")?.removeEventListener("click", increment)
+            document.getElementById("decrement")?.removeEventListener("click", decrement);
+            document.getElementById("reset")?.removeEventListener("click", reset);
         };
     }, []);
 
