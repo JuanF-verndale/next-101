@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   req: NextRequest,
-  context: { params: { number: string } }
+  {params}: { params: Promise<{ number: string }> }
 ) {
-  const { number } = await context.params;
+  const { number } = await params;
 
   const parsedNumber = parseInt(number, 10);
   if (isNaN(parsedNumber)) {
